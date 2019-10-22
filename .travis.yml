@@ -3,10 +3,10 @@ services:
   - docker
 
 before_install:
-  - docker build -t ammarghazali/react-test -f ./client/Dockerfile.dev ./client
+  - docker build -t ammarghazali/complex-docker -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e CI=true ammarghazali/react-test npm run test
+  - docker run -e CI=true ammarghazali/complex-docker npm run test
 
 after_success:
   - docker build -t ammarghazali/multi-client ./client
