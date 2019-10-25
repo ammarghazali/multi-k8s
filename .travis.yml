@@ -3,9 +3,7 @@ services:
   - docker
 
 before_install:
-  - cd client
-  - docker build -t ammarghazali/react-test -f Dockerfile.dev .
-  - cd ..
+  - docker build -t ammarghazali/react-test -f C:/Users/Ammar Ghazali/Desktop/WEB/complex-docker/client/Dockerfile.dev C:/Users/Ammar Ghazali/Desktop/WEB/complex-docker/client
 
 script:
   - docker run -e CI=true ammarghazali/react-test npm test # TODO
