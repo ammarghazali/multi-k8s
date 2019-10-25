@@ -4,7 +4,7 @@ services:
 
 before_install:
   - cd client
-  - docker build -t ammarghazali/react-test -f Dockerfile.dev ./client # TODO
+  - docker build -t ammarghazali/react-test -f Dockerfile.dev . # TODO
   - cd ..
 
 script:
