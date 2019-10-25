@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t ammarghazali/react-test -f C:/Users/'Ammar Ghazali'/Desktop/WEB/complex-docker/client/Dockerfile.dev C:/Users/'Ammar Ghazali'/Desktop/WEB/complex-docker/client
+  - docker build -t ammarghazali/react-test -f $PWD/client/Dockerfile.dev $PWD/client
 
 script:
   - docker run -e CI=true ammarghazali/react-test npm test # TODO
